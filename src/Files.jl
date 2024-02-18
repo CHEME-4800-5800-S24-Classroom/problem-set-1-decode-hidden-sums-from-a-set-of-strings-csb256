@@ -7,15 +7,15 @@ TODO: Add documentation
 """
 function puzzleparse(filename::String)::Dict{Int64, MyPuzzleRecordModel}
     
-    # initialize -
+    # initialize
     records = Dict{Int64, MyPuzzleRecordModel}()
     linecounter = 1;
     
-    # main -
     open(filename, "r") do io
         for line ∈ eachline(io)
             
-            # TODO: do something with this line of text
+            records[linecounter] = build_record_model(line)
+            linecounter += 1
 
         end
     end

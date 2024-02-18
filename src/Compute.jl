@@ -12,12 +12,29 @@ function decode_part_1(models::Dict{Int64, MyPuzzleRecordModel})::Tuple{Int64, D
     
     # initialize -
     total = 0;
+    linecode = 0;
     codes = Dict{Int64, Int64}();
+
+    for (linenum,modelnum) in models
+        
+        idz = isnumeric.(modelnum.characters)
+        numbers = modelnum.characters[idz]
+        
+        # in numbers get first and lastdigit
+        tmp = Array{Char,1}()
+        push!(tmp, numbers[1])
+        push!(tmp, numbers[end])
+
+        # z = parse.(Int,numbers)
+        linecode = join(tmp)|> x-> parse(Int,x)
+
     
-    # TODO: Add the logic for part 1 here
-    # ...
+
+        total += linecode
+        codes[linenum]=linecode
     
-    # return the total -
+    end
+
     return (total, codes);
 end
 
