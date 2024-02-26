@@ -1,14 +1,17 @@
 
-# ===== PRIVATE METHODS BELOW HERE =================================================================================== #
-# TODO: Put private helper methods here. Don't forget to use the _ naming convention, and to add basic documentation.
-# ===== PRIVATE METHODS ABOVE HERE =================================================================================== #
-
 # ===== PUBLIC METHODS BELOW HERE =================================================================================== #
-# TODO: Make a build method to construct MyPuzzleRecordModel types
+"""
+build_record_model(record::String) -> MyPuzzleRecordModel
 
+Builds an instance of the `MyPuzzleRecordModel` type from a string
+
+### Arguments
+- `record::String`: the string being used to make the puzzle
+"""
 function build_record_model(record::String)::MyPuzzleRecordModel
 
     # check: should we check to see if the parameters are valid?
+    @assert (typeof(record)==String)
     # Will this ever get called with invalid parameters?
 
     model = MyPuzzleRecordModel();

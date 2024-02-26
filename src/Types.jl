@@ -1,9 +1,11 @@
 """
     MyPuzzleRecordModel
 
-TODO: Add documentation
+### Fields 
+- `record::String`: a test string 
+- `characters::Array{Char, 1}`: an array with each character individually indexed
+- `len::Int64`: the length of the test string
 """
-# TODO: Finish the MyPuzzleRecordModel type
 mutable struct MyPuzzleRecordModel
    
     # data fields 
@@ -12,7 +14,5 @@ mutable struct MyPuzzleRecordModel
     len::Int64
         
     # constructor
-    # MyPuzzleRecordModel(record::String, characters::Array{Char, 1}, len::Int64) = new()
     MyPuzzleRecordModel() = new()
-
 end

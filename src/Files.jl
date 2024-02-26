@@ -3,7 +3,10 @@
 """
     puzzleparse(filename::String) -> Dict{Int64, MyPuzzleRecordModel}
 
-TODO: Add documentation
+Reads a file from the path, and returns an instance of the `MyMoviewReviewDocumentModel` type.
+
+### Arguments
+- `filename::String`: the name of the file with the test strings
 """
 function puzzleparse(filename::String)::Dict{Int64, MyPuzzleRecordModel}
     
